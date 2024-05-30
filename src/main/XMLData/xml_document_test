@@ -1,0 +1,24 @@
+<IMDB>
+    <SHOW>
+        <TITLE>The Fugitive</TITLE>
+        <YEAR>1993</YEAR>
+        <AKA>Auf der Flucht</AKA>
+        <AKA>Fuggitivo, Il</AKA>
+        <REVIEW>
+            <REVIEWER>Roger Ebert</REVIEWER>
+            <RATING>Two thumbs up!</RATING>
+            <COMMENT>This is a fun action movie, Harrison Ford at his best.</COMMENT>
+        </REVIEW>
+    </SHOW>
+    <SHOW>
+        <TITLE>The X-Files</TITLE>
+        <YEAR>1994</YEAR>
+        <AKA>Akte X - Die unheimlichen Fälle des FBI</AKA>
+        <AKA>Aux frontières du réel</AKA>
+        <REVIEW>
+            <REVIEWER>John Doe</REVIEWER>
+            <RATING>Excellent!</RATING>
+            <COMMENT>Intriguing and suspenseful.</COMMENT>
+        </REVIEW>
+    </SHOW>
+</IMDB>

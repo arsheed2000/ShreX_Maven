@@ -1,0 +1,29 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:shrex="http://www.cse.ogi.edu/ShreX">
+
+    <xs:element name="IMDB">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="SHOW" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="TITLE" type="xs:string" shrex:tablename="Show" shrex:columnname="Title"/>
+                            <xs:element name="YEAR" type="xs:integer" shrex:tablename="Show" shrex:columnname="Year"/>
+                            <xs:element name="AKA" type="xs:string" minOccurs="0" maxOccurs="unbounded" shrex:tablename="Aka" shrex:columnname="AkaName"/>
+                            <xs:element name="REVIEW" minOccurs="0" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="REVIEWER" type="xs:string" shrex:tablename="Review" shrex:columnname="Reviewer"/>
+                                        <xs:element name="RATING" type="xs:string" shrex:tablename="Review" shrex:columnname="Rating"/>
+                                        <xs:element name="COMMENT" type="xs:string" shrex:tablename="Review" shrex:columnname="Comment"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+</xs:schema>
