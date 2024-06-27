@@ -1,3 +1,4 @@
+//Thomas
 import org.w3c.dom.*; // Importing DOM classes for XML parsing
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
