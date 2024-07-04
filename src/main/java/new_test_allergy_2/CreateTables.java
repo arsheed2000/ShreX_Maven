@@ -12,6 +12,12 @@ public class CreateTables {
         try (Connection connection = DatabaseConnection.getConnection();
              Statement stmt = connection.createStatement()) {
 
+            // SQL statement to drop the AllergyIntolerance table if it exists
+            String dropAllergyIntoleranceTable = "DROP TABLE IF EXISTS AllergyIntolerance;";
+
+            // Execute the SQL statement to drop the table
+            stmt.execute(dropAllergyIntoleranceTable);
+
             // SQL statement to create AllergyIntolerance table if it doesn't exist
             String createAllergyIntoleranceTable = "CREATE TABLE IF NOT EXISTS AllergyIntolerance (" +
                     "ID INTEGER PRIMARY KEY AUTOINCREMENT," +
