@@ -5,18 +5,16 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class DatabaseConnection {
-    private static String url;
+    private static final String DEFAULT_URL = "jdbc:sqlite:identifier.sqlite";
+    private static String url = DEFAULT_URL;
 
     // Method to establish a connection to the SQLite database
     public static Connection getConnection() throws SQLException {
-        if (url == null || url.isEmpty()) {
-            throw new SQLException("Database URL is not set.");
-        }
         return DriverManager.getConnection(url);
     }
 
     // Method to set the database URL
     public static void setUrl(String url) {
-        DatabaseConnection.url = url;
+        DatabaseConnection.url = (url == null || url.isEmpty()) ? DEFAULT_URL : url;
     }
 }
