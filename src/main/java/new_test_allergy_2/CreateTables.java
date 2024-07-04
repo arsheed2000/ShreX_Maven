@@ -13,13 +13,13 @@ public class CreateTables {
              Statement stmt = connection.createStatement()) {
 
             // SQL statement to drop the AllergyIntolerance table if it exists
-            String dropAllergyIntoleranceTable = "DROP TABLE IF EXISTS AllergyIntolerance;";
+            String droptable = "DROP TABLE IF EXISTS AllergyIntolerance;";
 
             // Execute the SQL statement to drop the table
-            stmt.execute(dropAllergyIntoleranceTable);
+            stmt.execute(droptable);
 
             // SQL statement to create AllergyIntolerance table if it doesn't exist
-            String createAllergyIntoleranceTable = "CREATE TABLE IF NOT EXISTS AllergyIntolerance (" +
+            String createtable = "CREATE TABLE IF NOT EXISTS AllergyIntolerance (" +
                     "ID INTEGER PRIMARY KEY AUTOINCREMENT," +
                     "ClinicalStatus TEXT," +
                     "VerificationStatus TEXT," +
@@ -37,7 +37,7 @@ public class CreateTables {
                     ");";
 
             // Execute the SQL statement to create the table
-            stmt.execute(createAllergyIntoleranceTable);
+            stmt.execute(createtable);
 
             System.out.println("Tables created successfully.");
         } catch (SQLException e) {
